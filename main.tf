@@ -23,8 +23,8 @@ resource "aws_default_security_group" "default" {
 
   # Inbound HTTP from anywhere
   ingress {
-    from_port = "${var.server_port}"
-    to_port = "${var.server_port}"
+    from_port = 8080
+    to_port = 8080
     protocol = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
